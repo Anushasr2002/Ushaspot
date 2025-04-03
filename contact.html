@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Ushaspot</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+</head>
+<body>
+
+    <!-- Header (Same as Homepage) -->
+    <header>
+        <div class="red-bar top-bar"></div>
+
+        <div class="logo-container">
+            <h1>
+                <a href="index.html">
+                    <img class="logo" src="logo.png" alt="Logo">
+                </a>
+            </h1>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li class="dropdown">
+                    <a href="products.html">PRODUCTS</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Sewing Machines</a></li>
+                        <li><a href="#">Fans</a></li>
+                        <li><a href="#">Iron Boxes</a></li>
+                        <li><a href="#">Room Coolers</a></li>
+                        <li><a href="#">Sewing Machine Motors</a></li>
+                        <li><a href="#">Sewing Machine Spares</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">SERVICE</a></li>
+                <li><a href="#">ABOUT US</a></li>
+                <li><a href="contact.html" class="active">CONTACT US</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="contact-hero">
+        <h1>Get in Touch with Us!</h1>
+        <p>We'd love to hear from you. Reach out for inquiries, support, or just to say hello.</p>
+    </section>
+
+    <!-- Address Section -->
+    <section class="contact-details">
+        <div class="contact-box">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Our Address</h3>
+            <p>Kizhakkenada, Market Road, Karunagappally, Kerala - 690518</p>
+        </div>
+
+        <div class="contact-box">
+            <i class="fas fa-phone"></i>
+            <h3>Call Us</h3>
+            <p>Landline: 0476-2624529</p>
+            <p>Mobile: +91 9645377338</p>
+        </div>
+
+        <div class="contact-box">
+            <i class="fas fa-envelope"></i>
+            <h3>Email Us</h3>
+            <p>aredevi@yahoo.com</p>
+            <p>ushaspotkarunagappally@gmail.com</p>
+        </div>
+        
+        <div class="contact-box">
+            <i class="fas fa-clock"></i>
+            <h3>Business Hours</h3>
+            <p>Monday - Saturday : 9:00AM - 8:00PM</p>
+            <p>Sunday: Closed</p>
+        </div>
+    </section>
+
+    <!-- Google Map -->
+    <section class="map">
+        <h2>Find Us Here</h2>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.087206882871!2d76.53392157387769!3d9.055809991006567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b060391faba6491%3A0x4d7488dd47c95afd!2sUSHASPOT!5e0!3m2!1sen!2sin!4v1743421165164!5m2!1sen!2sin" 
+            width="100%" 
+            height="400" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </section>
+
+    <!-- Footer (Same as Homepage) -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Kizhakkenada, Market Road, Karunagappally, Kerala - 690518</p>
+                <p><i class="fas fa-envelope"></i> aredevi@yahoo.com</p>
+                <p><i class="fas fa-envelope"></i> ushaspotkarunagappally@gmail.com</p>
+                <p><i class="fas fa-phone"></i> 0476-2624529</p>
+                <p><i class="fas fa-mobile-alt"></i> +91 9645377338</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <h3>Quick Inquiry</h3>
+                <form id="footer-inquiry-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                    <p id="footer-message" class="hidden">✅ Your message has been successfully sent!</p>
+                </form>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 USHASPOT. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

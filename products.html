@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products | Ushaspot</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="red-bar top-bar"></div>
+
+        <div class="logo-container">
+            <h1>
+                <a href="index.html">
+                    <img class="logo" src="logo.png" alt="Logo">
+                </a>
+            </h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li class="dropdown">
+                    <a href="products.html"  class="active">PRODUCTS</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Sewing Machines</a></li>
+                        <li><a href="#">Fans</a></li>
+                        <li><a href="#">Iron Boxes</a></li>
+                        <li><a href="#">Room Coolers</a></li>
+                        <li><a href="#">Sewing Machine Motors</a></li>
+                        <li><a href="#">Sewing Machine Spares</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">SERVICE</a></li>
+                <li><a href="#">ABOUT US</a></li>
+                <li><a href="contact.html">CONTACT US</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Product Categories Grid -->
+    <section class="product-categories">
+        <div class="category" onclick="redirectTo('sewing-machines.html')">
+            <img src="icons/sewing-machine-logo.jpeg" alt="Sewing Machines">
+            <h3>Sewing Machines</h3>
+            <p>View Range →</p>
+        </div>
+
+        <div class="category" onclick="redirectTo('fans.html')">
+            <img src="icons/fan-logo.jpeg" alt="Fans">
+            <h3>Fans</h3>
+            <p>View Range →</p>
+        </div>
+
+        <div class="category" onclick="redirectTo('iron-box.html')">
+            <img src="icons/iron-box-logo.jpeg" alt="Iron Box">
+            <h3>Iron Box</h3>
+            <p>View Range →</p>
+        </div>
+
+        <div class="category" onclick="redirectTo('room-coolers.html')">
+            <img src="icons/room-cooler-logo.jpeg" alt="Room Coolers">
+            <h3>Room Coolers</h3>
+            <p>View Range →</p>
+        </div>
+
+        <div class="category" onclick="redirectTo('sewing-motors.html')">
+            <img src="icons/sewing-motor-logo.jpeg" alt="Sewing Machine Motors">
+            <h3>Sewing Machine Motors</h3>
+            <p>View Range →</p>
+        </div>
+
+        <div class="category" onclick="redirectTo('spares.html')">
+            <img src="icons/spares-logo.jpeg" alt="Sewing Machine Spares">
+            <h3>Sewing Machine Spares</h3>
+            <p>View Range →</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Left: Contact Info + Social Media -->
+            <div class="footer-left">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Address: Kizhakkenada, Market Road, Karunagappally, <br>Kerala - 690518</p>
+                <p><i class="fas fa-envelope"></i> Email 1: aredevi@yahoo.com</p>
+                <p><i class="fas fa-envelope"></i> Email 2: ushaspotkarunagappally@gmail.com</p>
+                <p><i class="fas fa-phone"></i> Landline: 0476-2624529</p>
+                <p><i class="fas fa-mobile-alt"></i> Mobile: +91 9645377338</p>
+                
+                <!-- Social Media Icons -->
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                </div>
+                
+            </div>
+    
+            <!-- Right: Quick Inquiry Form -->
+            <div class="footer-right">
+                <h3 class="">Quick Inquiry</h3>
+                <form id="footer-inquiry-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                    <p id="footer-message" class="hidden">✅ Your message has been successfully sent!</p>
+                </form>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 USHASPOT. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <!-- JavaScript -->
+    <script>
+        function redirectTo(page) {
+            window.location.href = page;
+        }
+    </script>
+
+</body>
+</html>
