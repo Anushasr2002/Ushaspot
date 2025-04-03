@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ushaspot</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="products/product-style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+</head>
+<body>
+    <div class="header-placeholder"></div>
+    <header>
+        <div class="red-bar top-bar"></div>
+
+        <div class="logo-container">
+            <h1>
+                <a href="index.html">
+                    <img class="logo" src="logo.png" alt="Logo">
+                </a>
+            </h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li class="dropdown">
+                    <a href="products.html">PRODUCTS</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="products/sewing-machine.html">Sewing Machines</a></li>
+                        <li><a href="products/fan.html">Fans</a></li>
+                        <li><a href="products/iron-box.html">Iron Boxes</a></li>
+                        <li><a href="products/room-cooler.html">Room Coolers</a></li>
+                        <li><a href="products/sewing-motor.html">Sewing Machine Motors</a></li>
+                        <li><a href="products/sewing-spare.html">Sewing Machine Spares</a></li>
+                    </ul>
+                </li>
+                <li><a href="service.html">SERVICE</a></li>
+                <li><a href="about.html" class="active">ABOUT US</a></li>
+                <li><a href="contact.html">CONTACT US</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="about-hero">
+        <div class="about-hero-overlay">
+            <h1>Since 1965</h1>
+            <p>Decades of trust, quality, and customer satisfaction.</p>
+        </div>
+    </section>
+
+    <!-- Vision & Mission Section -->
+    <section class="vision-mission">
+        <h2>Our Vision & Mission</h2>
+        <p>
+            We serve customers by retailing sewing machines and fans with a mission of 
+            <strong>"More value, less money"</strong> at affordable prices. 
+            Our goal is to provide the best service, achieve customer satisfaction, 
+            and operate our business with qualified professionals who understand customer needs.
+        </p>
+        <div class="icons-container">
+            <div class="about-icon">
+                <img src="assets/affordable.png" alt="Affordability">
+                <p>Affordable Prices</p>
+            </div>
+            <div class="about-icon">
+                <img src="assets/service.png" alt="Better Service">
+                <p>Better Service</p>
+            </div>
+            <div class="about-icon">
+                <img src="assets/satisfaction.png" alt="Customer Satisfaction">
+                <p>Customer Satisfaction</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About the Team Section -->
+    <section class="about-team">
+        <h2>Who We Are</h2>
+        <p>
+            Our journey began in 1965 with a simple vision - to help provide high-quality sewing machines and fans 
+            that add value to people's lives. Over the decades, our business has grown with expertise, 
+            dedication, and a strong commitment to customer satisfaction.
+        </p>
+        <div class="about-team-image">
+            <img src="assets/team.jpg" alt="Our Team">
+        </div>
+    </section>
+
+    <!-- Call to Action (CTA) -->
+    <section class="about-cta">
+        <h2>Want to know more?</h2>
+        <div class="about-cta-buttons">
+            <a href="contact.html" class="about-btn">Contact Us</a>
+            <a href="products.html" class="about-btn">Explore Our Products</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Left: Contact Info + Social Media -->
+            <div class="footer-left">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Address: Kizhakkenada, Market Road, Karunagappally, <br>Kerala - 690518</p>
+                <p><i class="fas fa-envelope"></i> Email 1: aredevi@yahoo.com</p>
+                <p><i class="fas fa-envelope"></i> Email 2: ushaspotkarunagappally@gmail.com</p>
+                <p><i class="fas fa-phone"></i> Landline: 0476-2624529</p>
+                <p><i class="fas fa-mobile-alt"></i> Mobile: +91 9645377338</p>
+                
+                <!-- Social Media Icons -->
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                </div>
+                
+            </div>
+    
+            <!-- Right: Quick Inquiry Form -->
+            <div class="footer-right">
+                <h3 class="">Quick Inquiry</h3>
+                <form id="footer-inquiry-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                    <p id="footer-message" class="hidden">✅ Your message has been successfully sent!</p>
+                </form>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 USHASPOT. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
