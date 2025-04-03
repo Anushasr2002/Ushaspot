@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ushaspot</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="product-style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="red-bar top-bar"></div>
+
+        <div class="logo-container">
+            <h1>
+                <a href="index.html">
+                    <img class="logo" src="logo.png" alt="Logo">
+                </a>
+            </h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">HOME</a></li>
+                <li class="dropdown">
+                    <a href="products.html">PRODUCTS</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="products/sewing-machine.html">Sewing Machines</a></li>
+                        <li><a href="products/fan.html">Fans</a></li>
+                        <li><a href="products/iron-box.html">Iron Boxes</a></li>
+                        <li><a href="products/room-cooler.html">Room Coolers</a></li>
+                        <li><a href="products/sewing-motor.html">Sewing Machine Motors</a></li>
+                        <li><a href="products/sewing-spare.html">Sewing Machine Spares</a></li>
+                    </ul>
+                </li>
+                <li><a href="service.html">SERVICE</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="contact.html">CONTACT US</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Left: Contact Info + Social Media -->
+            <div class="footer-left">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Address: Kizhakkenada, Market Road, Karunagappally, <br>Kerala - 690518</p>
+                <p><i class="fas fa-envelope"></i> Email 1: aredevi@yahoo.com</p>
+                <p><i class="fas fa-envelope"></i> Email 2: ushaspotkarunagappally@gmail.com</p>
+                <p><i class="fas fa-phone"></i> Landline: 0476-2624529</p>
+                <p><i class="fas fa-mobile-alt"></i> Mobile: +91 9645377338</p>
+                
+                <!-- Social Media Icons -->
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                </div>
+                
+            </div>
+    
+            <!-- Right: Quick Inquiry Form -->
+            <div class="footer-right">
+                <h3 class="">Quick Inquiry</h3>
+                <form id="footer-inquiry-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                    <p id="footer-message" class="hidden">✅ Your message has been successfully sent!</p>
+                </form>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 USHASPOT. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -171,3 +171,106 @@ document.addEventListener("DOMContentLoaded", function () {
         setTimeout(() => message.classList.add("hidden"), 3000); // Hide message after 3 seconds
     });
 });
+
+// Sewing Machine page dropdown functionality
+document.addEventListener("DOMContentLoaded", function () {
+    // Function to handle dropdown hover and selection
+    function setupDropdown(dropdownId, defaultText) {
+        const dropdown = document.getElementById(dropdownId);
+        const selected = dropdown.querySelector(".dropdown-selected");
+        const optionsList = dropdown.querySelector(".dropdown-options");
+        const options = dropdown.querySelectorAll(".dropdown-option");
+
+        // Open dropdown on hover
+        dropdown.addEventListener("mouseenter", function () {
+            optionsList.style.display = "block";
+            selected.style.color = "#FF2F2F"; // Change arrow color to user's red
+        });
+
+        // Close dropdown when mouse leaves
+        dropdown.addEventListener("mouseleave", function () {
+            optionsList.style.display = "none";
+            selected.style.color = "black"; // Reset arrow color
+        });
+
+        // Handle option hover and selection
+        options.forEach(option => {
+            option.addEventListener("mouseenter", function () {
+                if (!option.classList.contains("selected")) {
+                    option.style.color = "#FF2F2F"; // Change text color to user's red on hover
+                }
+            });
+
+            option.addEventListener("mouseleave", function () {
+                if (!option.classList.contains("selected")) {
+                    option.style.color = "black"; // Reset text color when not selected
+                }
+            });
+
+            option.addEventListener("click", function () {
+                // Remove 'selected' class from all options
+                options.forEach(opt => {
+                    opt.classList.remove("selected");
+                    opt.style.color = "black"; // Reset all options to black
+                });
+
+                // Add 'selected' class to the clicked option
+                option.classList.add("selected");
+                option.style.color = "#FF2F2F"; // Keep the selected option user's red
+
+                // Update dropdown selected text
+                selected.textContent = option.textContent;
+                dropdown.setAttribute("data-selected", option.getAttribute("data-value"));
+            });
+        });
+
+        // Add reset functionality (Select Type / Select Brand)
+        const resetOption = document.createElement("li");
+        resetOption.classList.add("dropdown-option");
+        resetOption.textContent = defaultText;
+        resetOption.style.fontWeight = "bold"; // Make it bold for distinction
+        resetOption.setAttribute("data-value", "");
+
+        resetOption.addEventListener("click", function () {
+            selected.textContent = defaultText;
+            dropdown.setAttribute("data-selected", "");
+
+            // Remove 'selected' class from all options
+            options.forEach(opt => {
+                opt.classList.remove("selected");
+                opt.style.color = "black"; // Reset all options to black
+            });
+        });
+
+        optionsList.insertBefore(resetOption, optionsList.firstChild);
+    }
+
+    // Initialize dropdowns with reset option
+    setupDropdown("machine-type-dropdown", "Select Type");
+    setupDropdown("brand-dropdown", "Select Brand");
+
+    // Filtering functionality
+    document.getElementById("search-btn").addEventListener("click", function () {
+        const selectedType = document.getElementById("machine-type-dropdown").getAttribute("data-selected") || "";
+        const selectedBrand = document.getElementById("brand-dropdown").getAttribute("data-selected") || "";
+        const machineCards = document.querySelectorAll(".machine-card");
+        let hasResults = false;
+
+        machineCards.forEach(card => {
+            const machineType = card.getAttribute("data-type");
+            const machineBrand = card.getAttribute("data-brand");
+
+            if ((selectedType === "" || machineType === selectedType) &&
+                (selectedBrand === "" || machineBrand === selectedBrand)) {
+                card.style.display = "block";
+                hasResults = true;
+            } else {
+                card.style.display = "none";
+            }
+        });
+
+        // Show "No products match your search" message
+        const noResultsMessage = document.getElementById("no-results-message");
+        noResultsMessage.style.display = hasResults ? "none" : "block";
+    });
+});
