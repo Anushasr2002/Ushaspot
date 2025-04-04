@@ -1,28 +1,12 @@
-USHA Tailor Dlx golden silver
-USHA Tailor Dlx mettalic brown
-USHA Tailor Dlx pacific blue
-USHA Tailor Dlx cherry red
-USHA Tailor Dlx cherry brown
-
-USHA CF Swift 600MM Brown
-USHA CF Swift 1200MM Brown
-USHA CF Allure Dlx 1200MM Brown
-USHA CF Allure Dlx 1200MM Ivory
-USHA CF Bloom Primrose 1200MM Cherry
 USHA EF Crisp Air Premia AF
 USHA EF Crisp Air
 USHA EF Crisp Air Premia
 USHA EF Crisp Air Premia CV
-USHA CF Bloom Daffodil 1200MM Smoke Brown
-USHA CF Bloom Magnolia 1200MM Sparkle Grey Blue
 USHA TF Maxx Air 400MM
 USHA WF Maxx Air 400MM
-USHA CF Racer 1200MM Rich Brown
 USHA PF Mist Air Duos 400MM
 USHA EF Crisp Air Premia BV
 USHA EF Turbo Heavy Duty
-5_1 USHA CF Racer Chrome 1200MM Brown
-7_1 USHA CF Racer Chrome 1200MM Ivory
 
 
 USHA EI 3710 Heavy Weight

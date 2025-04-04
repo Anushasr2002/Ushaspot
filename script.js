@@ -246,22 +246,22 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Initialize dropdowns with reset option
-    setupDropdown("machine-type-dropdown", "Select Type");
+    setupDropdown("product-type-dropdown", "Select Type");
     setupDropdown("brand-dropdown", "Select Brand");
 
     // Filtering functionality
     document.getElementById("search-btn").addEventListener("click", function () {
-        const selectedType = document.getElementById("machine-type-dropdown").getAttribute("data-selected") || "";
+        const selectedType = document.getElementById("product-type-dropdown").getAttribute("data-selected") || "";
         const selectedBrand = document.getElementById("brand-dropdown").getAttribute("data-selected") || "";
-        const machineCards = document.querySelectorAll(".machine-card");
+        const productCards = document.querySelectorAll(".product-card");
         let hasResults = false;
 
-        machineCards.forEach(card => {
-            const machineType = card.getAttribute("data-type");
-            const machineBrand = card.getAttribute("data-brand");
+        productCards.forEach(card => {
+            const productType = card.getAttribute("data-type");
+            const productBrand = card.getAttribute("data-brand");
 
-            if ((selectedType === "" || machineType === selectedType) &&
-                (selectedBrand === "" || machineBrand === selectedBrand)) {
+            if ((selectedType === "" || productType === selectedType) &&
+                (selectedBrand === "" || productBrand === selectedBrand)) {
                 card.style.display = "block";
                 hasResults = true;
             } else {
@@ -274,3 +274,26 @@ document.addEventListener("DOMContentLoaded", function () {
         noResultsMessage.style.display = hasResults ? "none" : "block";
     });
 });
+
+// Multiple color options functionality
+document.querySelectorAll('.variant-product').forEach(product => {
+    const imgElement = product.querySelector('.product-image');
+    const nameElement = product.querySelector('.product-name');
+    const buttons = product.querySelectorAll('.color-options button');
+
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            const newName = button.getAttribute('data-name');
+            const newImg = button.getAttribute('data-img');
+
+            // Update image and product name
+            imgElement.src = newImg;
+            nameElement.textContent = newName;
+
+            // Update active button styling
+            buttons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+        });
+    });
+});
+

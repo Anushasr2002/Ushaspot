@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ushaspot</title>
+    <title>Sewing Machines | Ushaspot</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="product-style.css">
@@ -44,8 +44,8 @@
     
     <!-- Filter Section -->
     <section class="filter-section">
-        <!-- Machine Type Filter -->
-        <div class="custom-dropdown" id="machine-type-dropdown">
+        <!-- product Type Filter -->
+        <div class="custom-dropdown" id="product-type-dropdown">
             <div class="dropdown-selected">Select Machine Type</div>
             <ul class="dropdown-options">
                 <li class="dropdown-option" data-value="domestic">Domestic</li>
@@ -68,41 +68,49 @@
         <button id="search-btn">Search</button>
     </section>
 
-    <!-- Machines Grid -->
-    <section id="machines-grid">
+    <!-- products Grid -->
+    <section id="products-grid">
         <!-- Placeholder Items -->
-        <div class="machine-card" data-type="domestic" data-brand="usha">
+        <div class="product-card" data-type="domestic" data-brand="usha">
             <img src="sewing-machines/marvela.jpg" alt="USHA Janome Marvela">
             <p>USHA Janome Marvela</p>
         </div>
-        <div class="machine-card" data-type="industrial" data-brand="usha">
+        <div class="product-card" data-type="industrial" data-brand="usha">
             <img src="sewing-machines/single-stitch-ind.png" alt="USHA Industrial Single Stitch - USB">
             <p>USHA Industrial Single Stitch - USB</p>
         </div>
-        <div class="machine-card" data-type="domestic" data-brand="usha">
+        <div class="product-card" data-type="domestic" data-brand="usha">
             <img src="sewing-machines/wonder-stitch.jpg" alt="USHA Janome Wonder Stitch Plus">
             <p>USHA Janome Wonder Stitch Plus</p>
         </div>
-        <div class="machine-card" data-type="domestic" data-brand="usha">
+        <div class="product-card" data-type="domestic" data-brand="usha">
             <img src="sewing-machines/allure-dlx.jpg" alt="USHA Janome Allure Dlx">
             <p>USHA Janome Allure Dlx</p>
         </div>
-        <div class="machine-card" data-type="industrial" data-brand="usha">
+        <div class="product-card" data-type="industrial" data-brand="usha">
             <img src="sewing-machines/rsm-pro.png" alt="USHA RSM Pro">
             <p>USHA RSM Pro</p>
         </div>
-        <div class="machine-card" data-type="domestic" data-brand="usha">
+        <div class="product-card" data-type="domestic" data-brand="usha">
             <img src="sewing-machines/stitch-magic.jpg" alt="USHA Janome Stitch Magic">
             <p>USHA Janome Stitch Magic</p>
         </div>
-        <div class="machine-card" data-type="industrial" data-brand="usha">
+        <div class="product-card" data-type="industrial" data-brand="usha">
             <img src="sewing-machines/memory-craft.jpg" alt="USHA Janome Memory Craft 550E">
             <p>USHA Janome Memory Craft 550E</p>
         </div>
-        <div class="machine-card" data-type="domestic" data-brand="usha">
-            <img src="sewing-machines/tailor-dlx-black.jpg" alt="USHA Tailor Dlx">
-            <p>USHA Tailor Dlx</p>
-        </div>
+        <div class="product-card variant-product" data-type="domestic" data-brand="usha">
+            <img src="sewing-machines/tailor-dlx-black.jpg" alt="USHA Tailor Dlx" class="product-image">
+            <p class="product-name">USHA Tailor Dlx Black</p>
+            <div class="color-options">
+                <button data-name="USHA Tailor Dlx Black" data-img="sewing-machines/tailor-dlx-black.jpg" class="active">Black</button>
+                <button data-name="USHA Tailor Dlx Golden Silver" data-img="sewing-machines/tailor-dlx-golden-silver.jpg">Golden Silver</button>
+                <button data-name="USHA Tailor Dlx Metallic Brown" data-img="sewing-machines/tailor-dlx-metallic-brown.jpg">Metallic Brown</button>
+                <button data-name="USHA Tailor Dlx Pacific Blue" data-img="sewing-machines/tailor-dlx-pacific-blue.jpg">Pacific Blue</button>
+                <button data-name="USHA Tailor Dlx Cherry Red" data-img="sewing-machines/tailor-dlx-cherry-red.jpg">Cherry Red</button>
+                <button data-name="USHA Tailor Dlx Cherry Brown" data-img="sewing-machines/tailor-dlx-cherry-brown.jpg">Cherry Brown</button>
+            </div>
+        </div>        
     </section>
 
     <p id="no-results-message" style="display: none; text-align: center; font-size: 1.5rem; color: grey; font-weight: bold; margin-top: 10px; margin-bottom: 80px">
