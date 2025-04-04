@@ -135,7 +135,7 @@
     margin-top: 10px;
     font-size: 16px;
     font-weight: bold;
-    color: #FF2F2F; /* 🔥 Red Text */
+    color: #880707; /* 🔥 Red Text */
 }
 
 /* Hover Effects */
@@ -158,7 +158,7 @@
 
 .color-options button {
     padding: 4px 8px;                    /* Smaller padding */
-    border: 1px solid #FF2F2F;           /* Thin border */
+    border: 1px solid #880707;           /* Thin border */
     background-color: white;
     color: black;
     cursor: pointer;
@@ -170,7 +170,7 @@
 
 .color-options button:hover,
 .color-options button.active {
-    background-color: #FF2F2F;
+    background-color: #880707;
     color: white;
 }
 

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Coolers | Ushaspot</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="product-style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+</head>
+<body>
+    <div class="header-placeholder"></div>
+    <header>
+        <div class="red-bar top-bar"></div>
+
+        <div class="logo-container">
+            <h1>
+                <a href="../index.html">
+                    <img class="logo" src="../logo.png" alt="Logo">
+                </a>
+            </h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">HOME</a></li>
+                <li class="dropdown">
+                    <a href="../products.html" class="active">PRODUCTS</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="sewing-machine.html">Sewing Machines</a></li>
+                        <li><a href="fan.html">Fans</a></li>
+                        <li><a href="iron-box.html">Iron Boxes</a></li>
+                        <li><a href="room-cooler.html" class="active">Room Coolers</a></li>
+                        <li><a href="sewing-motor.html">Sewing Machine Motors</a></li>
+                        <li><a href="sewing-spare.html">Sewing Machine Spares</a></li>
+                    </ul>
+                </li>
+                <li><a href="../service.html">SERVICE</a></li>
+                <li><a href="../about.html">ABOUT US</a></li>
+                <li><a href="../contact.html">CONTACT US</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="filter-section">
+        <!-- Brand Filter -->
+        <div class="custom-dropdown" id="brand-dropdown">
+            <div class="dropdown-selected">Select Brand</div>
+            <ul class="dropdown-options">
+                <li class="dropdown-option" data-value="usha">USHA</li>
+                <li class="dropdown-option" data-value="singer">Singer</li>
+            </ul>
+        </div>
+
+        <button id="search-btn">Search</button>
+    </section>
+
+    <!-- Room Coolers Grid -->
+    <section id="products-grid">
+        <!-- Placeholder Items -->
+        <div class="product-card" data-brand="singer">
+            <img src="room-coolers/singer-liberty.jpg" alt="Singer Liberty">
+            <p>Singer Liberty</p>
+        </div>
+        <div class="product-card" data-brand="usha">
+            <img src="room-coolers/usha-stellar.jpg" alt="Usha Stellar">
+            <p>Usha Stellar</p>
+        </div>
+        <div class="product-card" data-brand="usha">
+            <img src="room-coolers/usha-atomaria.jpg" alt="Usha Atomaria">
+            <p>Usha Atomaria</p>
+        </div>
+    </section>
+
+    <p id="no-results-message" style="display: none; text-align: center; font-size: 1.5rem; color: grey; font-weight: bold; margin-top: 10px; margin-bottom: 80px">
+        No products match your search.
+    </p>
+  
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Left: Contact Info + Social Media -->
+            <div class="footer-left">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Address: Kizhakkenada, Market Road, Karunagappally, <br>Kerala - 690518</p>
+                <p><i class="fas fa-envelope"></i> Email 1: aredevi@yahoo.com</p>
+                <p><i class="fas fa-envelope"></i> Email 2: ushaspotkarunagappally@gmail.com</p>
+                <p><i class="fas fa-phone"></i> Landline: 0476-2624529</p>
+                <p><i class="fas fa-mobile-alt"></i> Mobile: +91 9645377338</p>
+                
+                <!-- Social Media Icons -->
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                </div>
+                
+            </div>
+    
+            <!-- Right: Quick Inquiry Form -->
+            <div class="footer-right">
+                <h3 class="">Quick Inquiry</h3>
+                <form id="footer-inquiry-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                    <p id="footer-message" class="hidden">✅ Your message has been successfully sent!</p>
+                </form>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 USHASPOT. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

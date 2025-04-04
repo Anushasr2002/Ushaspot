@@ -173,10 +173,13 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Product page dropdown functionality
+// Product page dropdown functionality
 document.addEventListener("DOMContentLoaded", function () {
     // Function to handle dropdown hover and selection
     function setupDropdown(dropdownId, defaultText) {
         const dropdown = document.getElementById(dropdownId);
+        if (!dropdown) return; // Exit if dropdown doesn't exist
+
         const selected = dropdown.querySelector(".dropdown-selected");
         const optionsList = dropdown.querySelector(".dropdown-options");
         const options = dropdown.querySelectorAll(".dropdown-option");
@@ -184,39 +187,39 @@ document.addEventListener("DOMContentLoaded", function () {
         // Open dropdown on hover
         dropdown.addEventListener("mouseenter", function () {
             optionsList.style.display = "block";
-            selected.style.color = "#FF2F2F"; // Change arrow color to user's red
+            selected.style.color = "#FF2F2F"; // User's red
         });
 
         // Close dropdown when mouse leaves
         dropdown.addEventListener("mouseleave", function () {
             optionsList.style.display = "none";
-            selected.style.color = "black"; // Reset arrow color
+            selected.style.color = "black";
         });
 
         // Handle option hover and selection
         options.forEach(option => {
             option.addEventListener("mouseenter", function () {
                 if (!option.classList.contains("selected")) {
-                    option.style.color = "#FF2F2F"; // Change text color to user's red on hover
+                    option.style.color = "#FF2F2F";
                 }
             });
 
             option.addEventListener("mouseleave", function () {
                 if (!option.classList.contains("selected")) {
-                    option.style.color = "black"; // Reset text color when not selected
+                    option.style.color = "black";
                 }
             });
 
             option.addEventListener("click", function () {
-                // Remove 'selected' class from all options
+                // Remove 'selected' from all options
                 options.forEach(opt => {
                     opt.classList.remove("selected");
-                    opt.style.color = "black"; // Reset all options to black
+                    opt.style.color = "black";
                 });
 
-                // Add 'selected' class to the clicked option
+                // Add 'selected' to clicked option
                 option.classList.add("selected");
-                option.style.color = "#FF2F2F"; // Keep the selected option user's red
+                option.style.color = "#FF2F2F";
 
                 // Update dropdown selected text
                 selected.textContent = option.textContent;
@@ -224,44 +227,43 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
 
-        // Add reset functionality (Select Type / Select Brand)
+        // Add reset/default option
         const resetOption = document.createElement("li");
         resetOption.classList.add("dropdown-option");
         resetOption.textContent = defaultText;
-        resetOption.style.fontWeight = "bold"; // Make it bold for distinction
+        resetOption.style.fontWeight = "bold";
         resetOption.setAttribute("data-value", "");
 
         resetOption.addEventListener("click", function () {
             selected.textContent = defaultText;
             dropdown.setAttribute("data-selected", "");
 
-            // Remove 'selected' class from all options
             options.forEach(opt => {
                 opt.classList.remove("selected");
-                opt.style.color = "black"; // Reset all options to black
+                opt.style.color = "black";
             });
         });
 
         optionsList.insertBefore(resetOption, optionsList.firstChild);
     }
 
-    // Initialize dropdowns with reset option
     // Initialize dropdowns only if they exist
-const productTypeDropdown = document.getElementById("product-type-dropdown");
-if (productTypeDropdown) {
-    setupDropdown("product-type-dropdown", "Select Type");
-}
+    if (document.getElementById("product-type-dropdown")) {
+        setupDropdown("product-type-dropdown", "Select Type");
+    }
 
-const brandDropdown = document.getElementById("brand-dropdown");
-if (brandDropdown) {
-    setupDropdown("brand-dropdown", "Select Brand");
-}
-
+    if (document.getElementById("brand-dropdown")) {
+        setupDropdown("brand-dropdown", "Select Brand");
+    }
 
     // Filtering functionality
     document.getElementById("search-btn").addEventListener("click", function () {
-        const selectedType = document.getElementById("product-type-dropdown").getAttribute("data-selected") || "";
-        const selectedBrand = document.getElementById("brand-dropdown").getAttribute("data-selected") || "";
+        const typeDropdown = document.getElementById("product-type-dropdown");
+        const brandDropdown = document.getElementById("brand-dropdown");
+
+        const selectedType = typeDropdown ? typeDropdown.getAttribute("data-selected") || "" : "";
+        const selectedBrand = brandDropdown ? brandDropdown.getAttribute("data-selected") || "" : "";
+
         const productCards = document.querySelectorAll(".product-card");
         let hasResults = false;
 
@@ -278,11 +280,14 @@ if (brandDropdown) {
             }
         });
 
-        // Show "No products match your search" message
+        // Show or hide "No results" message
         const noResultsMessage = document.getElementById("no-results-message");
-        noResultsMessage.style.display = hasResults ? "none" : "block";
+        if (noResultsMessage) {
+            noResultsMessage.style.display = hasResults ? "none" : "block";
+        }
     });
 });
+
 
 // Multiple color options functionality
 document.querySelectorAll('.variant-product').forEach(product => {
