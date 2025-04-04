@@ -172,7 +172,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// Sewing Machine page dropdown functionality
+// Product page dropdown functionality
 document.addEventListener("DOMContentLoaded", function () {
     // Function to handle dropdown hover and selection
     function setupDropdown(dropdownId, defaultText) {
@@ -246,8 +246,17 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Initialize dropdowns with reset option
+    // Initialize dropdowns only if they exist
+const productTypeDropdown = document.getElementById("product-type-dropdown");
+if (productTypeDropdown) {
     setupDropdown("product-type-dropdown", "Select Type");
+}
+
+const brandDropdown = document.getElementById("brand-dropdown");
+if (brandDropdown) {
     setupDropdown("brand-dropdown", "Select Brand");
+}
+
 
     // Filtering functionality
     document.getElementById("search-btn").addEventListener("click", function () {
