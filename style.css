@@ -691,6 +691,7 @@ nav ul li a.active {
 
 .about-icon {
     text-align: center;
+    padding: 10px;
 }
 
 .about-icon img {
@@ -702,6 +703,7 @@ nav ul li a.active {
     font-size: 16px;
     margin-top: 10px;
     font-weight: bold;
+    color: #880707;
 }
 
 /* About Team Section */
@@ -757,7 +759,7 @@ nav ul li a.active {
 
 .about-btn {
     background: white;
-    color: #FF2F2F;
+    color: #880707;
     text-decoration: none;
     padding: 15px 30px;
     font-size: 18px;
