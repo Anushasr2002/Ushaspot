@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://anushasr2002.github.io/Ushaspot/sitemap.xml
+Sitemap: https://www.ushaspot.com/sitemap.xml
