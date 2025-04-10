@@ -408,7 +408,7 @@ nav ul li a.active {
 
 /* Right Section: Quick Enquiry */
 .footer-right {
-    width: 45%;
+    width: 40%;
 }
 
 .footer-right h3 {
@@ -418,29 +418,24 @@ nav ul li a.active {
     margin-bottom: 10px;
 }
 
-.footer-right form input,
-.footer-right form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: none;
-    border-radius: 5px;
+.footer-links {
+    list-style: none;
+    padding: 20px;
+    margin-top: 10px;
 }
 
-.footer-right form button {
-    background: white;
-    color: #FF2F2F;
-    padding: 10px 15px;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    transition: 0.3s;
-    border-radius: 5px;
+.footer-links li {
+    margin-bottom: 8px;
 }
 
-.footer-right form button:hover {
-    background: #ddd;
-    transform: scale(1.2); 
+.footer-links a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ddd;
 }
 
 /* Message Sent Confirmation */
