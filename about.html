@@ -6,6 +6,7 @@
     <title>About Us | Ushaspot</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
 </head>
 <body>
@@ -19,8 +20,9 @@
                     <img class="logo" src="logo.png" alt="Logo">
                 </a>
             </h1>
+            <div class="hamburger" id="hamburger">&#9776;</div> <!-- ☰ icon -->
         </div>
-        <nav>
+        <nav  class="desktop-nav">
             <ul>
                 <li><a href="index.html">HOME</a></li>
                 <li class="dropdown">
@@ -39,6 +41,28 @@
                 <li><a href="contact.html">CONTACT US</a></li>
             </ul>
         </nav>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="close-btn" id="closeMenu">&times;</div>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li>
+                    <a href="products.html">PRODUCTS</a>
+                    <ul>
+                        <li><a href="products/sewing-machine.html">Sewing Machines</a></li>
+                        <li><a href="products/fan.html">Fans</a></li>
+                        <li><a href="products/iron-box.html">Iron Boxes</a></li>
+                        <li><a href="products/room-cooler.html">Room Coolers</a></li>
+                        <li><a href="products/sewing-motor.html">Sewing Machine Motors</a></li>
+                        <li><a href="products/sewing-spare.html">Sewing Machine Spares</a></li>
+                    </ul>
+                </li>
+                <li><a href="service.html">SERVICE</a></li>
+                <li><a href="about.html" class="active">ABOUT US</a></li>
+                <li><a href="contact.html">CONTACT US</a></li>
+            </ul>
+        </div>
     </header>
     
     <!-- Hero Section -->

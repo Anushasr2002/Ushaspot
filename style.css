@@ -13,6 +13,8 @@ body, h1, p, ul, li {
 /* Full height for the body */
 html, body {
     height: 100%;
+    max-width: 100%;
+  overflow-x: hidden;
 }
 
 /* Full-width Red Bars */
@@ -45,10 +47,6 @@ header {
 .logo-container {
     text-align: center;
     margin-bottom: 10px; /* Spacing between logo and navbar */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     position: relative;
 }
 
@@ -350,7 +348,7 @@ nav ul li a.active {
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
-    width: 100%;
+    max-width: 100%;
 }
 
 /* Footer Container */
@@ -522,19 +520,6 @@ nav ul li a.active {
     border-color: #e60000;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .product-categories {
-        grid-template-columns: repeat(2, 1fr); /* 2 per row on smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .product-categories {
-        grid-template-columns: repeat(1, 1fr); /* 1 per row on mobile */
-    }
-}
-
 /* ========================
    SERVICES PAGE STYLES
 ======================== */
@@ -614,24 +599,6 @@ nav ul li a.active {
     margin-top: 10px;
     font-weight: bold;
 }
-
-/* CTA Section is reused (from About Us page) */
-
-@media (max-width: 768px) {
-    .services-hero .about-hero-overlay h1 {
-        font-size: 32px;
-    }
-
-    .services-why-choose .icons-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .services-why-choose .about-icon {
-        max-width: 100%;
-    }
-}
-
 
 /* ========================
    ABOUT PAGE STYLES
@@ -781,31 +748,6 @@ nav ul li a.active {
     color: white;
     border: 2px solid white;
 }
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .about-hero-overlay h1 {
-        font-size: 36px;
-    }
-
-    .about-hero-overlay p {
-        font-size: 16px;
-    }
-
-    .icons-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .about-team-image img {
-        width: 90%;
-    }
-
-    .about-cta-buttons {
-        flex-direction: column;
-    }
-}
-
 /* ========================
    CONTACT PAGE STYLES
    ======================== */
@@ -886,7 +828,58 @@ nav ul li a.active {
     color: #FF2F2F;
     margin-bottom: 20px;
 }
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product-categories {
+        grid-template-columns: repeat(2, 1fr); /* 2 per row on smaller screens */
+    }
+}
 
+@media (max-width: 480px) {
+    .product-categories {
+        grid-template-columns: repeat(1, 1fr); /* 1 per row on mobile */
+    }
+}
+/* CTA Section is reused (from About Us page) */
+
+@media (max-width: 768px) {
+    .services-hero .about-hero-overlay h1 {
+        font-size: 32px;
+    }
+
+    .services-why-choose .icons-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services-why-choose .about-icon {
+        max-width: 100%;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-hero-overlay h1 {
+        font-size: 36px;
+    }
+
+    .about-hero-overlay p {
+        font-size: 16px;
+    }
+
+    .icons-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-team-image img {
+        width: 90%;
+    }
+
+    .about-cta-buttons {
+        flex-direction: column;
+    }
+}
 /* Responsive Design */
 @media (max-width: 768px) {
     .contact-details {
@@ -896,39 +889,5 @@ nav ul li a.active {
 
     .contact-box {
         width: 90%;
-    }
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-        text-align: center;
-    }
-    .footer-left, .footer-right {
-        width: 100%;
-    }
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .slider-container {
-        width: 100%;
-    }
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .logo {
-        width: 150px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    nav ul li {
-        display: block;
     }
 }
