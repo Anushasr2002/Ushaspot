@@ -140,7 +140,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const formData = new FormData(form);
 
         // Send data to Formspree API
-        fetch("https://formspree.io/f/mvgkbqpw", {
+        fetch("https://formsubmit.co/ushaspotkarunagappally@gmail.com", {
             method: "POST",
             body: formData,
             headers: { "Accept": "application/json" }
@@ -159,9 +159,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// Footer inquiry form submission
+// Footer Enquiry form submission
 document.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementById("footer-inquiry-form");
+    const form = document.getElementById("footer-Enquiry-form");
     const message = document.getElementById("footer-message");
 
     form.addEventListener("submit", function (e) {
