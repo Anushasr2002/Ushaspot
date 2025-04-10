@@ -366,10 +366,11 @@ nav ul li a.active {
     padding-left: 50px;
 }
 
-.footer-left i {
+.footer-left a {
     color: white;
     margin-right: 8px;
     font-size: 18px;
+    text-decoration: none;
 }
 
 .footer-left h3 {
