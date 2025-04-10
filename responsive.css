@@ -69,6 +69,7 @@
         padding: 0 20px;
     }
     .mobile-menu {
+        display: block;
         position: fixed;
         top: 0;
         right: -100%;
